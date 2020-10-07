@@ -1,11 +1,9 @@
 package com.gestionecole.domaine;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {
@@ -20,14 +18,11 @@ public class Student {
 	private String numberPhone;
 	private String dateOfBirth;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-	private Course course;
-	
 	public Student() {
 		super();
 	}
 	
-	public Student(String firstName, String lastName, String mailAdresse, String adress, String numberPhone, String dateOfBirth, Course course) {
+	public Student(String firstName, String lastName, String mailAdresse, String adress, String numberPhone, String dateOfBirth) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -35,7 +30,6 @@ public class Student {
 		this.adress = adress;
 		this.numberPhone = numberPhone;
 		this.dateOfBirth = dateOfBirth;
-		this.course = course;
 	}
 
 	public Integer getId() {
@@ -92,14 +86,6 @@ public class Student {
 
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
-	}
-	
-	public Course getCourse() {
-		return course;
-	}
-
-	public void setCourse(Course course) {
-		this.course = course;
 	}
 
 	@Override
