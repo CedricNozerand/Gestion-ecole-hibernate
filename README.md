@@ -1,6 +1,6 @@
-#Programme de gestion des écoles
+# Programme de gestion des écoles
 
-=PREREQUIS
+** PREREQUIS
 *IDE Eclipse
 *Serveur Apache
 *PhpMyAdmin
