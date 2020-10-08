@@ -1,12 +1,13 @@
 # Programme de gestion des écoles
 
 ## PREREQUIS
-#### *IDE Eclipse *Serveur Apache *PhpMyAdmin
+* IDE Eclipse 
+* Serveur Apache
+* PhpMyAdmin
 
-** INSTALLATION **
-Veuillez télécharger les sources et les placer dans votre espace de travaille.
-Créez une nouvelle base de données avec le nom "doogschool" et importer le.sql présent à la racine du projet.
-
-Adapter le code du persistence.xml afin d'adapter le login et mot de passe de votre serveur de base de données.
-
-Lancer le programme
+## INSTALLATION
+1. Lancez votre PhpMyAdmin et insérez la commande suivante: CREATE DATABASE doogschool
+1. Veuillez télécharger les sources et les placer dans votre espace de travaille.
+1. Lancer votre eclipse et importer le projet
+1. Dans le fichier persistence.xml modifier les ligne 15 et 16 dans le cas où vous avez un login et un mot de passe particulier
+1. Votre programme est prêt à être lancé
