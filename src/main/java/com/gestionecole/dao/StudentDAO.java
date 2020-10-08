@@ -1,5 +1,7 @@
 package com.gestionecole.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -31,15 +33,26 @@ public class StudentDAO {
 		tx.commit();
 	}
 	
-	public void delete(int id) {
-		
+	public void delete(Student student) {
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		em.remove(student);
+		tx.commit();
 	}
 	
-	public void findByID(int id) {
-		
+	public Student findByID(int id) {
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		Student student = em.find(Student.class, id);
+		tx.commit();
+		return student;
 	}
 	
-	public void findAll() {
-		
+	public List<Student> findAll() {
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		List<Student> students = em.createQuery("select s from Student s").getResultList();
+		tx.commit();
+		return students;
 	}
 }
