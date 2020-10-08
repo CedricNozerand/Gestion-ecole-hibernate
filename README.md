@@ -10,4 +10,5 @@
 1. Veuillez télécharger les sources et les placer dans votre espace de travaille.
 1. Lancer votre eclipse et importer le projet
 1. Dans le fichier persistence.xml modifier les ligne 15 et 16 dans le cas où vous avez un login et un mot de passe particulier
-1. Votre programme est prêt à être lancé
+1. Effectuez la commande "mvn clean package" cela vous générera un fichier .jar
+1. a suivre
