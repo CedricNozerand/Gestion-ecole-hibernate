@@ -1,10 +1,7 @@
 # Programme de gestion des écoles
 
 ## PREREQUIS
-####
-*IDE Eclipse
-*Serveur Apache
-*PhpMyAdmin
+#### *IDE Eclipse *Serveur Apache *PhpMyAdmin
 
 ** INSTALLATION **
 Veuillez télécharger les sources et les placer dans votre espace de travaille.
