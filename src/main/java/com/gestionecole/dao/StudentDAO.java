@@ -19,6 +19,10 @@ public class StudentDAO {
 		em = emf.createEntityManager();
 	}
 	
+	/**
+	 * Créer un nouvel étudiant
+	 * @param student
+	 */
 	public void create(Student student) {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -26,6 +30,10 @@ public class StudentDAO {
 		tx.commit();
 	}
 	
+	/**
+	 * modifie un étudiant
+	 * @param student
+	 */
 	public void update(Student student) {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -33,6 +41,10 @@ public class StudentDAO {
 		tx.commit();
 	}
 	
+	/**
+	 * Supprime un étudiant
+	 * @param student
+	 */
 	public void delete(Student student) {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -40,6 +52,11 @@ public class StudentDAO {
 		tx.commit();
 	}
 	
+	/**
+	 * Recherche un étudiant en fonction de son id
+	 * @param id
+	 * @return student
+	 */
 	public Student findByID(int id) {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
@@ -48,6 +65,10 @@ public class StudentDAO {
 		return student;
 	}
 	
+	/**
+	 * recherche tous les étudiants
+	 * @return list d'étudiant
+	 */
 	public List<Student> findAll() {
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
